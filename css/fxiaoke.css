@@ -19,13 +19,49 @@ a {
   .container {
     width: 100%; } }
 
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 24px; }
+
+h1,
+h2,
+h3 {
+  font-weight: 400; }
+
+/*动画*/
+@keyframes appearLeft {
+  0% {
+    transform: translateX(-200px); }
+  to {
+    transform: translateX(0); } }
+
+@keyframes appearRight {
+  0% {
+    transform: translateX(200px); }
+  to {
+    transform: translateX(0); } }
+
+@keyframes opacity_app {
+  0% {
+    filter: alpha(opacity=30);
+    opacity: .3; }
+  to {
+    filter: alpha(opacity=100);
+    opacity: 1; } }
+
 /*header模块*/
 header {
   width: 100%;
   position: fixed;
   top: 0;
   background-color: #FFFFFF;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 255; }
 
 .logo {
   display: inline-block;
@@ -70,7 +106,8 @@ header {
   background-color: #FB923F;
   color: #FFFFFF; }
 
-.sign_btn a:hover {
+.sign_btn a:hover,
+.btn_exp:hover {
   background-color: #FE7819;
   color: #FFFFFF; }
 
@@ -85,9 +122,67 @@ header {
     border: 0; }
 
 /*article模块*/
-article {
-  background-color: #495473;
-  height: 60%; }
+.slide {
+  background-color: #495473; }
+
+.cover {
+  text-align: center;
+  color: #FFFFFF; }
+  .cover h1 {
+    padding-top: 10%; }
+  .cover h3 {
+    padding-top: 1%; }
+
+.btn_exp {
+  display: inline-block;
+  width: 180px;
+  line-height: 50px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  background-color: #FB923F;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 8% 0 4% 0; }
+
+.feature_one {
+  height: 550px;
+  overflow: hidden; }
+
+.feature_one div {
+  float: left; }
+
+.feature_one .text {
+  width: 60%;
+  padding: 120px 30px 0; }
+  .feature_one .text p {
+    margin-top: 50px;
+    line-height: 36px; }
+
+.feature_one .pic {
+  width: 40%;
+  height: 520px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-top: 30px; }
+
+.feature_one:nth-child(2n) {
+  background-color: #F0F4F8; }
+
+#fea1 {
+  background-image: url(../img/feature1.png); }
+
+#fea2 {
+  background-image: url(../img/feature2.png);
+  background-position: 100% 0; }
+
+#fea3 {
+  background-image: url(../img/feature3.png); }
+
+.ani_left {
+  animation: appearLeft 2s ease, opacity_app 1.5s linear; }
+
+.ani_right {
+  animation: appearRight 2s ease, opacity_app 1.5s linear; }
 
 /*footer模块*/
 footer {

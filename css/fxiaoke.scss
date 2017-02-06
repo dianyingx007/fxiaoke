@@ -21,7 +21,15 @@ $sign_btn_bg: #FFFFFF;//按钮的背景颜色，以登录为准
 $sign_btn_c_h: #FFFFFF; //按钮在hover状态下的字体颜色
 $sign_btn_b_h: #FE7819; //按钮在hover状态下的背景颜色
 //article
-$art_bg_color: #495473;
+$slide_bg: #495473;//透明图层的背景颜色
+$slide_color: #FFFFFF; //透明图层的字体颜色
+$btn_exp_w: 180px;//立即体验按钮的宽度
+$btn_exp_h: 50px;//立即体验按钮的高度
+
+$fea_pic1: url(../img/feature1.png); //feature第一张照片
+$fea_pic2: url(../img/feature2.png);
+$fea_pic3: url(../img/feature3.png);
+$fea_even_bg: #F0F4F8; //feature偶数项的背景颜色
 //footer
 $foot_bg_color: #eefeee;
 
@@ -45,6 +53,47 @@ a {
         width: 100%;
     }
 }
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 24px;
+}
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+/*动画*/
+@keyframes appearLeft {
+    0% {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes appearRight {
+    0% {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes opacity_app {
+    0% {
+        filter: alpha(opacity=30);
+        opacity: .3;
+    }
+    to {
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+}
 /*header模块*/
 header {
     width: 100%;
@@ -52,6 +101,7 @@ header {
     top: 0;
     background-color: $header_bg;
     box-shadow: 0 0 8px rgba(0,0,0,.3);
+    z-index: 255;
 }
 .logo {
     display: inline-block;
@@ -97,7 +147,8 @@ header {
     background-color: $sign_btn_color;
     color: $sign_btn_bg;
 }
-.sign_btn a:hover {
+.sign_btn a:hover,
+.btn_exp:hover {
     background-color: $sign_btn_b_h;
     color: $sign_btn_c_h;
 }
@@ -116,10 +167,74 @@ header {
         border: 0;
     }
 }
+
 /*article模块*/
-article {
-    background-color: $art_bg_color;
-    height: 60%;
+//第一块section
+.slide {
+    background-color: $slide_bg;
+}
+.cover {
+    text-align: center;
+    color: $slide_color;
+    h1 {
+        padding-top: 10%;
+    }
+    h3 {
+        padding-top: 1%;
+    }
+}
+.btn_exp {//立即体验按钮
+    display: inline-block;
+    width: $btn_exp_w;
+    line-height: $btn_exp_h;
+    border-radius: $btn_exp_h/2;
+    color: $sign_btn_bg;
+    background-color: $sign_btn_color;
+    box-shadow: 0 2px 10px rgba(0,0,0,.3);
+    margin: 8% 0 4% 0;
+}
+//第二块section
+.feature_one {
+    height: 550px;
+    overflow: hidden;
+}
+.feature_one div {
+    float: left;
+}
+.feature_one .text {
+    width: 60%;
+    padding: 120px 30px 0;
+    p {
+        margin-top: 50px;
+        line-height: 36px;
+    }
+}
+.feature_one .pic {
+    width: 40%;
+    height: 520px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+.feature_one:nth-child(2n) {
+    background-color: $fea_even_bg;
+}
+#fea1 {
+    background-image: $fea_pic1;
+}
+#fea2 {
+    background-image: $fea_pic2;
+    background-position: 100% 0;
+}
+#fea3 {
+    background-image: $fea_pic3;
+}
+.ani_left {
+    animation: appearLeft 2s ease, opacity_app 1.5s linear;
+}
+.ani_right {
+    animation: appearRight 2s ease, opacity_app 1.5s linear;
 }
 /*footer模块*/
 footer {
