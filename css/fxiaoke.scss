@@ -1,7 +1,128 @@
+/*定义的变量*/
+//全局
+$con_w: 1200px; //container的适应宽度，低于这个宽度时，width为100%
+//header
+$header_bg: #FFFFFF; //header的背景颜色
+
+$logo_url: url("../img/icon_ERPlogo.png"); //logo的地址
+$logo_w: 147px; //logo的宽度
+$logo_h: 64px; //logo的高度
+
+$nav_a_w: 100px; //navbar中的a标签的宽度
+$nav_a_h: 80px; //navbar中的a标签的高度
+$nav_color: #000000; //navbar中的字体颜色
+$nav_color_t: #FFFFFF; //在透明状态下，navbar中的字体颜色
+
+$sign_btn_w: 125px; //每个sign按钮的宽度
+$sign_btn_h: 40px; //每个sign按钮的高度
+$sign_btn_r: 20px; //每个sign按钮的圆角
+$sign_btn_color: #FB923F;//按钮的颜色，以登录为准
+$sign_btn_bg: #FFFFFF;//按钮的背景颜色，以登录为准
+$sign_btn_c_h: #FFFFFF; //按钮在hover状态下的字体颜色
+$sign_btn_b_h: #FE7819; //按钮在hover状态下的背景颜色
+//article
+$art_bg_color: #495473;
+//footer
+$foot_bg_color: #eefeee;
+
 /*统一样式*/
-
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+/*局部统一样式*/
+.container {
+    width: $con_w;
+    margin: 0 auto;
+}
+@media screen and (max-width:$con_w - 1) {
+    .container {
+        width: 100%;
+    }
+}
 /*header模块*/
-
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: $header_bg;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+}
+.logo {
+    display: inline-block;
+    width: $logo_w;
+    height: $logo_h;
+    margin-top: ($nav_a_h - $logo_h)/2;
+    background-image: $logo_url;
+    background-size: cover;
+    float: left;
+    background-color: $sign_btn_color;//暂时显示背景色
+}
+.navbar {
+    margin-left: $logo_w;
+}
+.navbar a {
+    display: inline-block;
+    width: $nav_a_w;
+    line-height: $nav_a_h;
+    text-align: center;
+    color: $nav_color;
+}
+.sign_btn {
+    float: right;
+    a {
+        margin-right: 10px;
+    }
+}
+.sign_in,
+.sign_up {
+    display: inline-block;
+    width: $sign_btn_w;
+    line-height: $sign_btn_h;
+    margin-top: ($nav_a_h - $sign_btn_h)/2;
+    text-align: center;
+    border-radius: $sign_btn_r;
+}
+.sign_in {
+    background-color: $sign_btn_bg;
+    color: $sign_btn_color;
+    border: 1px solid $sign_btn_color;
+}
+.sign_up {
+    background-color: $sign_btn_color;
+    color: $sign_btn_bg;
+}
+.sign_btn a:hover {
+    background-color: $sign_btn_b_h;
+    color: $sign_btn_c_h;
+}
+.transparent {
+    background: initial;
+    box-shadow: none;
+    .logo {
+        background-color: initial;
+    }
+    .navbar {
+        a {
+            color: $nav_color_t;
+        }
+    }
+    .sign_in {
+        border: 0;
+    }
+}
 /*article模块*/
-
+article {
+    background-color: $art_bg_color;
+    height: 60%;
+}
 /*footer模块*/
+footer {
+    background-color: $foot_bg_color;
+    height: 60%;
+}

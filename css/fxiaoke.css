@@ -1,2 +1,95 @@
+@charset "UTF-8";
+/*定义的变量*/
+/*统一样式*/
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+/*局部统一样式*/
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+@media screen and (max-width: 1199px) {
+  .container {
+    width: 100%; } }
+
+/*header模块*/
 header {
-  color: red; }
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); }
+
+.logo {
+  display: inline-block;
+  width: 147px;
+  height: 64px;
+  margin-top: 8px;
+  background-image: url("../img/icon_ERPlogo.png");
+  background-size: cover;
+  float: left;
+  background-color: #FB923F; }
+
+.navbar {
+  margin-left: 147px; }
+
+.navbar a {
+  display: inline-block;
+  width: 100px;
+  line-height: 80px;
+  text-align: center;
+  color: #000000; }
+
+.sign_btn {
+  float: right; }
+  .sign_btn a {
+    margin-right: 10px; }
+
+.sign_in,
+.sign_up {
+  display: inline-block;
+  width: 125px;
+  line-height: 40px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 20px; }
+
+.sign_in {
+  background-color: #FFFFFF;
+  color: #FB923F;
+  border: 1px solid #FB923F; }
+
+.sign_up {
+  background-color: #FB923F;
+  color: #FFFFFF; }
+
+.sign_btn a:hover {
+  background-color: #FE7819;
+  color: #FFFFFF; }
+
+.transparent {
+  background: initial;
+  box-shadow: none; }
+  .transparent .logo {
+    background-color: initial; }
+  .transparent .navbar a {
+    color: #FFFFFF; }
+  .transparent .sign_in {
+    border: 0; }
+
+/*article模块*/
+article {
+  background-color: #495473;
+  height: 60%; }
+
+/*footer模块*/
+footer {
+  background-color: #eefeee;
+  height: 60%; }
