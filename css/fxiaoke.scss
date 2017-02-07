@@ -161,10 +161,10 @@ header {
     color: $sign_btn_c_h;
 }
 .transparent {
-    background: initial;
+    background-color: inherit;
     box-shadow: none;
     .logo {
-        background-color: initial;
+        background-color: inherit;//initial在ie上有兼容问题
     }
     .navbar {
         a {

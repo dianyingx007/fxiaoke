@@ -53,9 +53,9 @@ header { width: 100%; position: fixed; top: 0; background-color: #FFFFFF; box-sh
 
 .btn_exp:hover, .sign_btn a:hover { background-color: #FE7819; color: #FFFFFF; }
 
-.transparent { background: initial; box-shadow: none; }
+.transparent { background-color: inherit; box-shadow: none; }
 
-.transparent .logo { background-color: initial; }
+.transparent .logo { background-color: inherit; }
 
 .transparent .navbar a { color: #FFFFFF; }
 
