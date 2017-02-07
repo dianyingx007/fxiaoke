@@ -3,12 +3,14 @@
 /*统一样式*/
 * {
   padding: 0;
-  border: 0;
   margin: 0;
   box-sizing: border-box; }
 
 a {
   text-decoration: none; }
+
+img {
+  border: 0; }
 
 /*局部统一样式*/
 .container {
@@ -183,6 +185,118 @@ header {
 
 .ani_right {
   animation: appearRight 2s ease, opacity_app 1.5s linear; }
+
+.customer {
+  height: 620px;
+  padding: 80px 0;
+  overflow: hidden; }
+  .customer p {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px; }
+  .customer img {
+    width: 100%; }
+
+.industry {
+  height: 850px;
+  text-align: center;
+  background-color: #596582; }
+  .industry > p {
+    color: #FFF;
+    font-size: 36px;
+    padding: 70px 0; }
+
+.industry_list {
+  display: inline-block;
+  width: 675px;
+  margin: 0 auto; }
+
+.industry_one {
+  width: 225px;
+  height: 250px;
+  background-color: #FFF;
+  float: left;
+  box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.1); }
+  .industry_one p {
+    font-size: 20px;
+    margin-top: 50px; }
+  .industry_one .detail {
+    cursor: pointer;
+    color: #FFF;
+    border: 1px solid #FFF;
+    width: 100px;
+    line-height: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: none; }
+
+.industry_icon {
+  width: 50px;
+  height: 50px;
+  background-color: #596582;
+  margin: 75px auto 0 auto; }
+
+.industry_one:hover {
+  background-color: #FB923F; }
+  .industry_one:hover .industry_icon {
+    background-color: #FFF; }
+  .industry_one:hover p {
+    color: #FFF;
+    margin-top: 30px; }
+  .industry_one:hover .detail {
+    display: inline-block; }
+
+.download {
+  height: 450px;
+  background-color: #43588B;
+  text-align: center; }
+  .download p {
+    color: #FFF; }
+  .download .container > p {
+    font-size: 36px;
+    padding: 70px 0; }
+
+.download_one {
+  width: 25%;
+  float: left; }
+  .download_one p {
+    margin-top: 30px;
+    font-size: 28px; }
+  .download_one .img {
+    width: 125px;
+    height: 125px;
+    background-color: #FFF;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-position: 50%;
+    background-repeat: no-repeat; }
+  .download_one a:hover .img {
+    display: none; }
+  .download_one a:hover .download_icon {
+    display: block; }
+
+.download_icon {
+  width: 125px;
+  height: 125px;
+  background-color: #FB923F;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: none;
+  color: #FFF;
+  line-height: 125px;
+  font-size: 24px; }
+
+.apple {
+  background-image: url(../img/apple.png); }
+
+.android {
+  background-image: url(../img/android.png); }
+
+.mac {
+  background-image: url(../img/mac.png); }
+
+.windows {
+  background-image: url(../img/windows.png); }
 
 /*footer模块*/
 footer {

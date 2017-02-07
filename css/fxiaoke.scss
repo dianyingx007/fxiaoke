@@ -30,18 +30,23 @@ $fea_pic1: url("../img/feature1.png"); //feature第一张照片
 $fea_pic2: url("../img/feature2.png");
 $fea_pic3: url("../img/feature3.png");
 $fea_even_bg: #F0F4F8; //feature偶数项的背景颜色
+
+$industry_one_w: 225px; //单个industry的宽度
+$industry_one_h: 250px;
 //footer
 $foot_bg_color: #eefeee;
 
 /*统一样式*/
 * {
     padding: 0;
-    border: 0;
     margin: 0;
     box-sizing: border-box;
 }
 a {
     text-decoration: none;
+}
+img {
+    border: 0;
 }
 
 /*局部统一样式*/
@@ -198,7 +203,7 @@ header {
     margin: 8% 0 4%;
 }
 
-//第二块section
+//第二块section feature
 .feature_one {
     height: 550px;
     overflow: hidden;
@@ -242,6 +247,137 @@ header {
     animation: appearRight 2s ease, opacity_app 1.5s linear;
 }
 
+//第三块section customer
+.customer {
+    height: 620px;
+    padding: 80px 0;
+    overflow: hidden;
+    p {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+//第四块section industry
+.industry {
+    height: 850px;
+    text-align: center;
+    background-color: #596582;
+    >p {
+        color: #FFF;
+        font-size: 36px;
+        padding: 70px 0;
+    }
+}
+.industry_list {
+    display: inline-block;
+    width: $industry_one_w*3;
+    margin: 0 auto;
+}
+.industry_one {
+    width: $industry_one_w;
+    height: $industry_one_h;
+    background-color: #FFF;
+    float: left;
+    box-shadow: -10px -10px 30px rgba(0,0,0,.1);
+    p {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .detail {
+        cursor: pointer;
+        color: #FFF;
+        border: 1px solid #FFF;
+        width: 100px;
+        line-height: 30px;
+        border-radius: 15px;
+        margin-top: 20px;
+        display: none;
+    }
+}
+.industry_icon {
+    width: 50px;
+    height: 50px;
+    background-color: #596582;
+    margin: 75px auto 0 auto;
+}
+.industry_one:hover {
+    background-color: #FB923F;
+    .industry_icon {
+        background-color: #FFF;
+    }
+    p {
+        color: #FFF;
+        margin-top: 30px;
+    }
+    .detail {
+        display: inline-block;
+    }
+}
+
+//第五块section download
+.download {
+    height: 450px;
+    background-color: #43588B;
+    text-align: center;
+    p {
+        color: #FFF;
+    }
+    .container>p {
+        font-size: 36px;
+        padding: 70px 0;
+    }
+}
+.download_one {
+    width: 25%;
+    float: left;
+    p {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+    .img {
+        width: 125px;
+        height: 125px;
+        background-color: #FFF;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+    a:hover .img {
+        display: none;
+    }
+    a:hover .download_icon {
+        display: block;
+    }
+}
+.download_icon {
+    width: 125px;
+    height: 125px;
+    background-color: #FB923F;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: none;
+    color: #FFF;
+    line-height: 125px;
+    font-size: 24px;
+}
+.apple {
+    background-image: url(../img/apple.png);
+}
+.android {
+    background-image: url(../img/android.png);
+}
+.mac {
+    background-image: url(../img/mac.png);
+}
+.windows {
+    background-image: url(../img/windows.png);
+}
 /*footer模块*/
 footer {
     background-color: $foot_bg_color;
