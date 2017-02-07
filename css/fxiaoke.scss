@@ -34,7 +34,7 @@ $fea_even_bg: #F0F4F8; //feature偶数项的背景颜色
 $industry_one_w: 225px; //单个industry的宽度
 $industry_one_h: 250px;
 //footer
-$foot_bg_color: #eefeee;
+$foot_bg_color: #222A3D;
 
 /*统一样式*/
 * {
@@ -378,8 +378,33 @@ header {
 .windows {
     background-image: url(../img/windows.png);
 }
+
 /*footer模块*/
 footer {
     background-color: $foot_bg_color;
-    height: 60%;
+    height: 470px;
+}
+.footer_item {
+    width: 20%;
+    padding-left: 4%;
+    padding-top: 70px;
+    float: left;
+    p {
+        border-left: 3px solid #5169A3;
+        margin-bottom: 30px;
+        padding-left: 10px;
+        color: #FFF;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    a {
+        display: block;
+        color: darken(#FFF, 30%);
+        margin-top: 15px;
+        padding-left: 13px;
+        font-size: 14px;
+    }
+    a:hover {
+        color: #FFF;
+    }
 }
